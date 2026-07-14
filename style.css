@@ -1,0 +1,183 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #1e3c72 0%,
+        #2a5298 50%,
+        #6dd5fa 100%
+    );
+
+    overflow:hidden;
+}
+
+/* Background circles */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,255,255,.15);
+    border-radius:50%;
+    top:-120px;
+    left:-100px;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(255,255,255,.1);
+    border-radius:50%;
+    bottom:-120px;
+    right:-80px;
+}
+
+/* Card */
+
+.container{
+
+    position:relative;
+    z-index:2;
+
+    width:90%;
+    max-width:700px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    padding:60px 45px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    animation:fadeIn 1s ease;
+}
+
+/* Heading */
+
+.container h1{
+
+    font-size:42px;
+
+    color:#ffffff;
+
+    margin-bottom:20px;
+
+    letter-spacing:1px;
+}
+
+/* Paragraph */
+
+.container p{
+
+    color:#f1f1f1;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+}
+
+/* Button */
+
+.btn{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    background:#ffffff;
+
+    color:#1e3c72;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    transition:.35s;
+}
+
+.btn:hover{
+
+    background:#ffd54f;
+
+    color:#000;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.3);
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .container{
+
+        padding:40px 25px;
+
+    }
+
+    .container h1{
+
+        font-size:32px;
+
+    }
+
+    .container p{
+
+        font-size:16px;
+
+    }
+
+    .btn{
+
+        width:100%;
+    }
+
+}
